@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Yesteryear&display=swap");
+/*varijable*/
+/* rgb(220, 104, 5) */
+/* rgb(242, 205, 54) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #e5d7cc;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Yesteryear", cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/**************
+header
+**************/
+header {
+  background-image: linear-gradient(to right, rgba(242, 205, 54, 0.7), rgba(220, 104, 5, 0.7)), url(../header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+header .text {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .text h1 {
+  font-size: 7rem;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  header .text h1 {
+    font-size: 4rem;
+  }
+}
+
+/**************
+main
+**************/
+main {
+  margin-top: -200px;
+}
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  background: #f2cd36;
+}
+main .container section {
+  flex: 0 0 67%;
+}
+@media (max-width: 767px) {
+  main .container section {
+    flex: 0 0 100%;
+  }
+}
+main .container section article {
+  padding: 40px;
+}
+@media (max-width: 767px) {
+  main .container section article {
+    text-align: center;
+  }
+}
+main .container section article h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  main .container section article h2 {
+    font-size: 2rem;
+  }
+}
+main .container section article:nth-child(1) {
+  background: #fff;
+}
+main .container section article:nth-child(2) {
+  background: #f7f7f7;
+}
+main .container section article:nth-child(3) {
+  background: #fff;
+}
+main .container section article:nth-child(4) {
+  background: #f7f7f7;
+}
+main .container section article button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background: #dc6805;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+main .container section article button:hover {
+  background: #f2cd36;
+  cursor: pointer;
+}
+main .container section article .admin {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+main .container aside {
+  flex: 0 0 30%;
+  padding: 30px 40px 30px 0;
+}
+@media (max-width: 767px) {
+  main .container aside {
+    flex: 0 0 100%;
+    text-align: center;
+    padding-left: 30px;
+  }
+}
+main .container aside h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+main .container aside input {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+main .container aside article p {
+  margin-bottom: 30px;
+  line-height: 2;
+}
+main .container aside article ul {
+  margin-bottom: 40px;
+}
+main .container aside article ul li {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #dc6805;
+}
+main .container aside article ul li a {
+  color: #333;
+  font-weight: 500;
+}
+
+/**************
+footer
+**************/
+footer {
+  background: #dc6805;
+  text-align: center;
+  padding: 30px 0;
+}
+footer p {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

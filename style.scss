@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Yesteryear&display=swap');
+/*varijable*/
+    $bodyFont: 'Roboto Condensed', sans-serif;
+    $headingsFont: 'Yesteryear', cursive;
+    $cream: #e5d7cc;
+    $gray: #333;
+    $orange: #dc6805;  /* rgb(220, 104, 5) */
+    $yellow: #f2cd36;  /* rgb(242, 205, 54) */
+    $font: 16px;
+    $white: #fff;
+    $lightgray: #f7f7f7;
+    $transition: .3s ease;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $bodyFont;
+    background: $cream;
+    color: $gray;
+    line-height: 1.6;
+    font-size: $font;
+}
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+h1 {
+    font-family: $headingsFont;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    @media(max-width:767px) {
+        width: 90%;
+    }
+}
+@mixin flex($justify,$align,$direction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background: $orange;
+    color: $white;
+    font-size: 1rem;
+    transition: $transition;
+    margin-top: 20px;
+    &:hover {
+        background: $yellow;
+        cursor: pointer;
+    }
+} 
+/**************
+header
+**************/
+header {
+    background-image: linear-gradient(to right,rgba($yellow,.7),rgba($orange,.7)),url(../header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    .text {
+        height: 80vh;
+        @include flex(center, center, column);
+        h1 {
+            font-size: 7rem;
+            font-weight: 400;
+            @media(max-width:767px) {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+/**************
+main
+**************/
+main {
+    margin-top:-200px ;
+    .container {
+        @include flex(space-between, flex-start, row);
+        background:$yellow;
+        section {
+            flex: 0 0 67%;
+            @media(max-width:767px) {
+                flex: 0 0 100%;
+            }
+            article {
+                padding: 40px;
+                @media(max-width:767px) {
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    @media(max-width:767px) {
+                        font-size: 2rem;
+                    }
+                }
+                &:nth-child(1) {
+                    background: $white;
+                }
+                &:nth-child(2) {
+                    background: $lightgray;
+                }
+                &:nth-child(3) {
+                    background: $white;
+                }
+                &:nth-child(4) {
+                    background: $lightgray;
+                }
+                button {
+                    @include btn;
+                }
+                .admin {
+                    border: 1px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        aside {
+            flex: 0 0 30%;
+            padding: 30px 40px 30px 0;
+            @media(max-width:767px) {
+                flex: 0 0 100%;
+                text-align: center;
+                padding-left: 30px;
+            }
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            input {
+                padding: 10px;
+                margin-bottom: 30px;
+            }
+            article {
+                p {
+                    margin-bottom: 30px;
+                    line-height: 2;
+                }
+                ul {
+                    margin-bottom: 40px;
+                    li {
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid $orange;
+                        a {
+                            color: $gray;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/**************
+footer
+**************/
+footer {
+    background: $orange;
+    text-align: center;
+    padding: 30px 0;
+    p {
+        color: $white;
+    }
+}
+
